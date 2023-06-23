@@ -10,12 +10,13 @@ import { BsGoogle, BsGithub } from "react-icons/bs";
 
 function AuthButtons() {
   const { setUserData } = useContext(UserDataContext);
+
   function handleGoogleSignIn() {
     const provider = new GoogleAuthProvider();
 
     signInWithPopup(auth, provider)
-      .then((result) => {
-        const userData = result.user;
+      .then((userCredential) => {
+        const userData = userCredential.user;
         setUserData(userData);
       })
       .catch((error) => {
@@ -27,8 +28,8 @@ function AuthButtons() {
     const provider = new GithubAuthProvider();
 
     signInWithPopup(auth, provider)
-      .then((result) => {
-        const userData = result.user;
+      .then((userCredential) => {
+        const userData = userCredential.user;
         setUserData(userData);
       })
       .catch((error) => {
@@ -53,4 +54,4 @@ function AuthButtons() {
   );
 }
 
-export default AuthButtons;
+export { AuthButtons };
