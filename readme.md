@@ -5,10 +5,10 @@ Este projeto é um estudo de autenticação usando o Firebase. Ele demonstra a i
 ## Funcionalidades
 
 - Autenticação de usuários com provedores de terceiros (Google e Github).
+- Autenticação de usuários com email e senha (Funcional mas sem verificações).
 
 - ## Futuras funcionalidades
 
-- Autenticação de usuários com email e senha.
 - Recuperação de senha por email.
 
 ## Configuração
